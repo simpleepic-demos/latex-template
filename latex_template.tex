@@ -1,0 +1,510 @@
+\documentclass[a4paper, 12pt]{report}
+
+% Package - For Images
+\usepackage{graphicx}
+\graphicspath{{./imgs/}}
+
+% Package - For Tables
+\usepackage{multirow}
+
+% Package - For Math expressions
+\usepackage{amsmath}
+
+% Package - For Code Listings
+\usepackage{listings}
+
+% Package - For Colors
+\usepackage{xcolor}
+\definecolor{MyColor1}{rgb}{0.9, 0, 0} % rgb - red | green | blue = 0-1
+\definecolor{MyColor2}{RGB}{200, 100, 50} % 00 - FF => 0-255
+\definecolor{MyColor3}{cmyk}{0.7, 0.5, 0.3, 0.1}
+\definecolor{MyColor4}{gray}{0.5}
+
+% Package - For Graphics
+\usepackage[pdftex]{pict2e}
+\usepackage{tikz}
+
+% Package - For Graph plottings
+\usepackage{pgfplots}
+
+% Theorem and Proofs related configurations
+\usepackage{amsthm} % For Proofs
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+
+% Package - For References
+\usepackage{hyperref}
+\renewcommand{\bibname}{References}
+\usepackage{natbib}
+
+% Package - For Acronyms
+\usepackage[acronym, automake]{glossaries}
+\makeglossaries
+\newacronym{os}{OS}{Operating Systems}
+\newacronym{ram}{RAM}{Random Access Memory}
+
+% Package - For indexing
+\usepackage{imakeidx}
+\makeindex[columns=3, title=Alphabetical Index]
+
+\title{Report Title}
+\author{Author Name \\ \textit{Author Description}}
+
+\begin{document}
+
+% Title Page
+\maketitle
+
+% Abstract Page
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{abstract}
+
+% Table of Contents Page
+\tableofcontents
+
+% List of Figures
+\listoffigures
+
+% List of Tables
+\listoftables
+
+% List of Code Listings
+\lstlistoflistings
+
+% Acronym page
+\newpage
+\printglossary[type=\acronymtype]
+
+% Chapters and Sections
+\chapter{Chapters and Sections}
+\section{Sample Section 1}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Sample Section 2}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\subsection{Sample Subsection 1}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas. Id aliquet lectus proin nibh nisl condimentum id. Blandit aliquam etiam erat velit. Urna cursus eget nunc scelerisque viverra mauris. Ipsum suspendisse ultrices gravida dictum fusce. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Id aliquet risus feugiat in ante metus. Faucibus a pellentesque sit amet. Sit amet consectetur adipiscing elit ut aliquam purus. Nunc faucibus a pellentesque sit amet porttitor eget dolor morbi. Turpis egestas maecenas pharetra convallis posuere morbi. Risus nullam eget felis eget nunc lobortis. Dictum non consectetur a erat nam. Ac ut consequat semper viverra nam libero justo laoreet sit. Quam pellentesque nec nam aliquam sem et tortor consequat id.
+
+\subsection{Sample Subsection 2}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas. Id aliquet lectus proin nibh nisl condimentum id. Blandit aliquam etiam erat velit. Urna cursus eget nunc scelerisque viverra mauris. Ipsum suspendisse ultrices gravida dictum fusce. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Id aliquet risus feugiat in ante metus. Faucibus a pellentesque sit amet. Sit amet consectetur adipiscing elit ut aliquam purus. Nunc faucibus a pellentesque sit amet porttitor eget dolor morbi. Turpis egestas maecenas pharetra convallis posuere morbi. Risus nullam eget felis eget nunc lobortis. Dictum non consectetur a erat nam. Ac ut consequat semper viverra nam libero justo laoreet sit. Quam pellentesque nec nam aliquam sem et tortor consequat id.
+
+\subsubsection{Sample Sub-Subsection 1}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+\subsection{Sample Subsection 3}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam id diam maecenas. Id aliquet lectus proin nibh nisl condimentum id. Blandit aliquam etiam erat velit. Urna cursus eget nunc scelerisque viverra mauris. Ipsum suspendisse ultrices gravida dictum fusce. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Id aliquet risus feugiat in ante metus. Faucibus a pellentesque sit amet. Sit amet consectetur adipiscing elit ut aliquam purus. Nunc faucibus a pellentesque sit amet porttitor eget dolor morbi. Turpis egestas maecenas pharetra convallis posuere morbi. Risus nullam eget felis eget nunc lobortis. Dictum non consectetur a erat nam. Ac ut consequat semper viverra nam libero justo laoreet sit. Quam pellentesque nec nam aliquam sem et tortor consequat id.
+
+\section{Sample Section 3}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+\chapter{Text formatting}
+\section{Bold}
+\textbf{Lorem ipsum} dolor sit amet, \textbf{consectetur adipiscing} elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+\section{Italic}
+\textit{Lorem ipsum} dolor sit amet, \textit{consectetur adipiscing} elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+\section{Underline}
+\underline{Lorem ipsum} dolor sit amet, \underline{consectetur adipiscing} elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+\section{Emphasize}
+\emph{Lorem ipsum} dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+
+\chapter{Lists}
+\section{Unordered Lists}
+\begin{itemize}
+	\item \textbf{Item 1} - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	\item Item 2
+	\item Item 3
+\end{itemize}
+
+\section{Ordered Lists}
+\begin{enumerate}
+	\item Item 1
+	\item Item 2
+	\item Item 3
+\end{enumerate}
+
+\section{Descriptive Lists}
+\begin{description}
+	\item[Item 1] - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	\item[Item 2] - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	\item[Item 3] - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{description}
+
+\section{Nested Lists}
+\begin{itemize}
+	\item Item 1
+	\begin{enumerate}
+		\item Item 1.1
+		\begin{description}
+			\item[Item 1] - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			\item[Item 2] - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			\item[Item 3] - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		\end{description}
+		\item Item 1.2
+		\item Item 1.3
+	\end{enumerate}
+	\item Item 2
+	\item Item 3
+\end{itemize}
+
+
+
+\chapter{Figures}
+\section{Images}
+\includegraphics[scale=1]{sample_img_1}
+
+\section{Figure Referencing}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut pharetra. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Ut morbi tincidunt augue interdum velit euismod. Sed sed risus pretium quam vulputate dignissim suspendisse in est. Amet dictum sit amet justo. Maecenas accumsan lacus vel facilisis volutpat est velit. Ultricies tristique nulla aliquet enim tortor at auctor. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Id diam maecenas ultricies mi eget. Fermentum leo vel orci porta non. Diam vulputate ut pharetra sit amet aliquam id. Id faucibus nisl tincidunt eget nullam non nisi est. Mauris a diam maecenas sed enim ut sem. Faucibus in ornare quam viverra orci sagittis eu volutpat. 
+(Figure \ref{fig:sample_img_2})
+
+\begin{figure}[!h]
+	\includegraphics[width=\textwidth]{sample_img_2}
+	\caption{Flower}
+	\label{fig:sample_img_2}
+\end{figure}
+
+
+
+\chapter{Tables}
+\begin{tabular}{|c|c|c|}
+	\hline
+	\multirow{2}{5em}{cell1} & cell2 & cell3 \\
+	 & cell2 & cell3 \\
+	\hline
+	cell1 & cell2 & cell3 \\
+	\hline
+\end{tabular}
+
+\vspace{0.75cm}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut pharetra. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Ut morbi tincidunt augue interdum velit euismod. Sed sed risus pretium quam vulputate dignissim suspendisse in est. Amet dictum sit amet justo. Maecenas accumsan lacus vel facilisis volutpat est velit. Ultricies tristique nulla aliquet enim tortor at auctor. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Id diam maecenas ultricies mi eget. Fermentum leo vel orci porta non. Diam vulputate ut pharetra sit amet aliquam id. Id faucibus nisl tincidunt eget nullam non nisi est. Mauris a diam maecenas sed enim ut sem. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+(Table \ref{tab:sample_table})
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\multirow{2}{5em}{cell1} & cell2 & cell3 \\
+	 	& cell2 & cell3 \\
+		\hline
+		cell1 & cell2 & cell3 \\
+		\hline
+	\end{tabular}
+	\caption{Sample Table}
+	\label{tab:sample_table}
+\end{table}
+
+
+
+\chapter{Mathematics}
+\section{Mathematical Expressions}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut pharetra.
+$x^n + y^n = z^n$
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut pharetra.
+\[x^n + y^n = z^n\]
+
+\[\sqrt{x^2 + y^2} = z\]
+
+% Greek Letters
+\( \alpha = \beta + \gamma + \delta + \epsilon \)
+
+% Relational Operators
+\( A \subset B \)
+
+% Matrices
+\vspace{.5cm}
+% Plain matrix
+$\begin{matrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{matrix}$
+
+% Parantheses matrix
+$\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{pmatrix}$
+
+\section{Quote}
+ vulputate dignissim suspendisse in est. Amet dictum sit amet justo. Maecenas accumsan lacus vel facilisis volutpat est velit. Ultricies tristique nulla aliquet enim tortor at auctor. 
+ 
+\begin{quote}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut pharetra.
+\end{quote}
+
+
+
+\chapter{Code Listings}
+\section{Verbatim}
+\begin{verbatim}
+num1 = 1.5
+num2 = 6.3
+
+sum = num1 + num2
+
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+\end{verbatim}
+
+\section{Use listing package for code listing}
+\begin{lstlisting}[language=Python]
+num1 = 1.5
+num2 = 6.3
+
+sum = num1 + num2
+
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+\end{lstlisting}
+
+\section{Import code from an external file}
+\lstinputlisting[language=Python, caption=Python code for add two numbers]{./codes/Adder.py}
+
+
+
+\chapter{Colors}
+\section{Default Colors}
+\begin{itemize}
+	\color{red}
+	\item Item 1
+	\color{green}
+	\item Item 2
+	\color{blue}
+	\item Item 3
+	\color{yellow}
+	\item Item 4
+	\color{cyan}
+	\item Item 5
+	\color{magenta}
+	\item Item 6
+\end{itemize}
+
+Lorem ipsum dolor sit amet, \colorbox{orange}{consectetur adipiscing elit}, sed do eiusmod tempor \colorbox{orange}{\color{white}{incididunt ut labore}} et dolore magna aliqua. Enim diam vulputate ut pharetra.
+
+\section{Custom Colors}
+\begin{itemize}
+	\item \textcolor{MyColor1}{My Custom Color 1}
+	\item \textcolor{MyColor2}{My Custom Color 2}
+	\item \textcolor{MyColor3}{My Custom Color 3}
+	\item \textcolor{MyColor4}{My Custom Color 4}
+\end{itemize}
+
+
+
+\chapter{Diagrams and Graphics}
+\section{Line Drawing}
+\setlength{\unitlength}{1cm}
+\begin{picture}(4, 4)
+	\put(0, 0){\line(1, 0){4}}
+	\linethickness{1mm}
+	\put(0, 0){\line(0, 1){4}}
+\end{picture}
+
+\section{Vectors}
+\setlength{\unitlength}{1cm}
+\begin{picture}(4, 4)
+	\put(0, 0){\vector(1, 0){4}}
+	\put(2, -0.3){\makebox(0, 0)[l]{x-axis}}
+	\put(0, 0){\vector(0, 1){4}}
+	\put(-0.3, 2){\makebox(0, 0)[r]{y-axis}}
+	\put(1, 1){\line(1, 0){3}}
+	\put(1, 4){\line(1, 0){3}}
+	\put(1, 1){\line(0, 1){3}}
+	\put(4, 1){\line(0, 1){3}}
+\end{picture}
+
+\section{Bezier Curves}
+\setlength{\unitlength}{1cm}
+\begin{picture}(4, 4)
+	\qbezier(0, 0)(1, 3)(4, 4)
+\end{picture}
+
+\section{Circle}
+\setlength{\unitlength}{1cm}
+\begin{picture}(4, 4)
+	\linethickness{2mm}
+	\put(2, 2){\color{red} \circle{1}}
+	\linethickness{1mm}
+	\put(2, 2){\color{green} \circle{2}}
+	\linethickness{0.5mm}
+	\put(2, 2){\color{blue} \circle{3}}
+\end{picture}
+
+
+
+\chapter{TikZ Package for Complex Drawings}
+\section{Line Drawings}
+\begin{tikzpicture}
+	\draw (-2, 0) -- (2, 0);
+	\draw (0, -2) -- (0, 2);
+\end{tikzpicture}
+
+\section{Grids}
+\begin{tikzpicture}
+	\draw[step=0.5cm, gray] (-2, -2) grid (2, 2);
+	\draw (-2, 0) -- (2, 0);
+	\draw (0, -2) -- (0, 2);
+	\draw[ultra thick] (0, 0) circle (2cm);
+\end{tikzpicture}
+
+\section{Curves}
+\begin{tikzpicture}
+	\draw (0, 0) .. controls(1, 2) and (3, -2) .. (4, 0);
+	\filldraw[red] (1, 2) circle (2pt)
+					(3, -2) circle (2pt);
+\end{tikzpicture}
+
+\section{Looping Elements}
+\begin{tikzpicture}
+	\foreach \x in {1, ..., 10}
+		\filldraw[green] (\x, 0) circle (0.4cm);
+\end{tikzpicture}
+
+\section{Tree Structure}
+\begin{tikzpicture}
+	\node {root}
+		child {node {left}}
+		child {node {right}
+			child {node {rc1}}
+			child {node {rc2}}
+		};
+\end{tikzpicture}
+
+\section{Colored Diagrams}
+\begin{tikzpicture}[fill opacity=0.5, thick]
+	\filldraw[fill=red] (0, 0) circle (2cm);
+	\filldraw[fill=green] (2, 0) circle (2cm);
+	\filldraw[fill=blue] (1, 1) circle (2cm);
+\end{tikzpicture}
+
+\section{Shades}
+\begin{tikzpicture}
+	\shade[ball color=white] (0, 0) circle (0.4cm);
+	\shade[ball color=green] (1, 0) circle (0.4cm);
+	\shade[ball color=yellow] (2, 0) circle (0.4cm);
+	\shade[ball color=red] (3, 0) circle (0.4cm);
+\end{tikzpicture}
+
+
+
+\chapter{Graph plotting}
+\section{2D Plots}
+\begin{tikzpicture}[scale=0.8]
+	\begin{axis}
+		\addplot[color=red]{exp(x)};
+	\end{axis}
+\end{tikzpicture}
+
+\vspace{0.5cm}
+
+\begin{tikzpicture}
+	\begin{axis}[xlabel=\(x\), ylabel=\(f(x)\)]
+		\addplot[color=blue]{x^2-2*x-1};
+		\addlegendentry{\(x^2-2*x-1\)};
+	\end{axis}
+\end{tikzpicture}
+
+
+\section{3D Plots}
+\begin{tikzpicture}[scale=0.8]
+	\begin{axis}
+		\addplot3[surf]{exp(x)};
+	\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1.3]
+	\begin{axis}[axis lines=left, xlabel=\(x\), ylabel=\(y\), zlabel=\(z\), colormap/greenyellow]
+		\addplot3[mesh, samples=50, domain=-8:8]{sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};
+		\addlegendentry{\(\frac{sin(r}{r}\)};
+	\end{axis}
+\end{tikzpicture}
+
+
+
+\chapter{Theorems and Proofs}
+\begin{theorem}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{theorem}
+
+\begin{theorem}[Pythagorean theorem]
+The well-known geometric theorem that the sum of the squares on the legs of a right triangle is equal to the square on the hypotenuse.
+\[a^2+b^2=c^2\]
+\end{theorem}
+
+\begin{corollary}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{corollary}
+
+\begin{lemma}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{lemma}
+
+\begin{proof}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{proof}
+
+
+
+\chapter{Fonts}
+\section{Font Sizes}
+Lorem ipsum {\tiny dolor sit amet}, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida neque convallis a cras semper auctor neque. Id diam maecenas ultricies mi eget. {\large Accumsan in nisl nisi scelerisque} eu ultrices. Varius morbi enim nunc faucibus a. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Senectus et netus et malesuada fames ac turpis. Urna porttitor rhoncus dolor purus non enim praesent. {\huge A iaculis at erat} pellentesque adipiscing commodo. Lorem ipsum dolor sit amet consectetur.
+
+\section{Font Families}
+% Roman Family
+\textrm{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+
+% Sans serif Family
+\textsf{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+
+% Monospace Family
+\texttt{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+
+\section{Font Styles}
+% Bold
+\textbf{Lorem ipsum dolor sit amet, consectetur adipiscing elit}
+
+% Slanted
+\textsl{Lorem ipsum dolor sit amet, consectetur adipiscing elit}
+
+% Small caps
+\textsc{Lorem ipsum dolor sit amet, consectetur adipiscing elit}
+
+
+
+\chapter{Referencing}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida neque convallis a cras semper auctor neque. Id diam maecenas ultricies mi eget. Accumsan in nisl nisi scelerisque eu ultrices. Varius morbi enim nunc faucibus a. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Senectus et netus et malesuada fames ac turpis. Urna porttitor rhoncus dolor purus non enim praesent. A iaculis at erat pellentesque adipiscing commodo. Lorem ipsum dolor sit amet consectetur. \citep{7458761}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida neque convallis a cras semper auctor neque. Id diam maecenas ultricies mi eget. Accumsan in nisl nisi scelerisque eu ultrices. Varius morbi enim nunc faucibus a. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Senectus et netus et malesuada fames ac turpis. Urna porttitor rhoncus dolor purus non enim praesent. A iaculis at erat pellentesque adipiscing commodo. Lorem ipsum dolor sit amet consectetur. \citep{microservices_book}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida neque convallis a cras semper auctor neque. Id diam maecenas ultricies mi eget. Accumsan in nisl nisi scelerisque eu ultrices. Varius morbi enim nunc faucibus a. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Senectus et netus et malesuada fames ac turpis. Urna porttitor rhoncus dolor purus non enim praesent. A iaculis at erat pellentesque adipiscing commodo. Lorem ipsum dolor sit amet consectetur. \citep{google}
+
+
+
+\chapter{Acronyms}
+\acrfull{os} dolor sit amet, \acrshort{os} adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida neque convallis a cras semper auctor neque. Id diam maecenas ultricies mi eget. Accumsan in nisl nisi scelerisque eu ultrices. Varius morbi enim nunc faucibus a. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Senectus et netus et malesuada fames ac turpis. Urna porttitor rhoncus dolor purus non enim praesent. A iaculis at erat pellentesque adipiscing commodo. Lorem ipsum dolor sit \acrfull{ram}.
+
+
+
+\chapter{Indexing}
+\textbf{Lorem}\index{lorem} ipsum dolor sit \textbf{amet}\index{amet}, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \textbf{Gravida}\index{gravida} neque convallis a cras semper auctor neque. Id diam maecenas ultricies mi eget. Accumsan in nisl nisi scelerisque eu ultrices. Varius morbi enim nunc faucibus a. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Senectus et netus et malesuada fames ac turpis. Urna porttitor rhoncus dolor purus non enim praesent. A iaculis at erat pellentesque adipiscing commodo. Lorem ipsum dolor sit amet consectetur.
+
+
+
+% Bibliography
+\bibliographystyle{agsm}
+\bibliography{./bibs/bibtexs.bib}
+
+% Indexes
+\printindex
+
+\end{document}
